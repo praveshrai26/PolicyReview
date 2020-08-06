@@ -1,0 +1,72 @@
+<app-top-bar></app-top-bar>
+
+<p class="lead" style="color: rgba(44,47,139,1);font-weight:bold ; size: 40px;font-family:Bw Modelica SS01;">Verify Policy Fillings</p>
+
+<div style="width: 50%; height: 100%;position: absolute;float: left;"><!--<ngx-doc-viewer url="./assets/2.docx" viewer="google"  style="width:230px;height:500px ;position: absolute;float: left;">
+</ngx-doc-viewer>
+<object [data]='fun()' page='2' class="embed-responsive-item"  type="application/pdf" width="50%" height="60%"> <p></p>  
+  </object>
+-->
+ 
+  <ngx-doc-viewer [url]="path" viewer="pdf"  style="width:50%;height:50% ;">
+</ngx-doc-viewer>
+ <!---- <embed type="application/pdf" [src]="fun()" style="width: 50%; height: 50%;position: absolute;float: left;">-->
+    
+</div>
+<div style="right: 0px; top:90px; position: absolute;">
+    <div style="position: relative; float: left ; margin-right: 10px; margin-top: 5px;" class="form-check-inline">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1" style="color: rgba(44,47,139,1);">
+          Show Only Differences
+        </label>
+        </div>
+      
+    <button class="btn" style="background-color: rgba(44,47,139,1); color: white; margin-right: 3px;">Autopopulate Suggestions</button>
+ <button class="btn" style="background-color: rgba(44,47,139,1); color: white;margin-right: 3px;">Submit</button>
+ <button class="btn" style="background-color: rgba(44,47,139,1); color: white;margin-right: 3px; "> Save Draft  </button>
+</div>
+<div style="float: right;width:75%; ">
+<table    class="table table-sm table-hover table-striped " >
+    <thead style="background-color:rgba(44,47,139,1)">
+      <tr style="color: white;" >
+       
+        <th  scope="col" >Field List</th>
+        <th scope="col">Binder</th>
+        <th scope="col">Policy Doc</th>
+        <th scope="col">Difference</th>
+        <th scope="col">Required Value</th>
+        <th scope="col">Actions</th>
+        <th scope="col" >Comments</th>
+
+    </tr>
+    </thead>
+    <tbody  >
+
+      <tr class='clickable-row ' >
+        
+        <td id="id">Named Insured</td>
+       <td>XYZ</td>
+       <td>XYZ</td>
+       <td>No</td>
+       <td>Null</td>
+      <td> <div class="form-group" style="width: 120px;" >
+        <select name="Action" [(ngModel)]="Action" style="height: 30px;" ngModel class="form-control" class="custom-select" >
+            
+            <option >Flag</option>
+            <option >Ignore</option>
+            <option >Approve</option>
+         </select>
+      </div>
+       </td>
+       <td style="width:200px"><app-commentsection></app-commentsection></td>
+      
+
+      </tr>
+      
+     
+    </tbody>
+    
+  
+  </table>
+  
+  </div>

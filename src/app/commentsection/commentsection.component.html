@@ -1,0 +1,46 @@
+
+    <div class="dropdown " >
+        <button class="btn dropdown-toggle " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons">
+                comment_bank
+                </span>
+        </button>
+    <div class="dropdown-menu dropdown-menu-left" style="font-size: small ; width: 100%;"   >
+       
+            
+            <div class="detailBox "  >
+              <div class="titleBox">
+                <label>Comments</label>
+                  <button type="button" class="close" aria-hidden="true">&times;</button>
+              </div>
+              
+              <div class="actionBox" style="overflow-y: scroll;" >
+                  <ul class="commentList" *ngFor="let k of comments" >
+                      <li>
+                          <div class="commenterImage">
+                            <p>{{k.name}}</p>
+                          </div>
+                          <div class="commentText" >
+                              <p class="">{{k.comment}}</p> 
+          
+                          </div>
+                          
+                          
+                      </li>
+                      
+                  </ul>
+                  <form class="form" role="form" >
+                      <div class="form-group" >
+                          <input class="form-control" type="text" [(ngModel)]="yourcomment" name="yourcomment" placeholder="Your comments" />
+                      </div>
+                      
+                      <div class="form-group">
+                          <button  class="btn btn-primary" (click)="add();">Add</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+                 
+     
+</div>
+</div>

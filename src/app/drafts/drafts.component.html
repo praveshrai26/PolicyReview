@@ -1,0 +1,54 @@
+
+
+<form class="form-inline my-2 my-lg-0" style="right: 0px;position: absolute; top: 90px;">
+ 
+   
+    
+ <input class="form-control mr-sm-2" style="margin-left:10px;" type="search" placeholder="Search" aria-label="Search"  [ngModelOptions]="{standalone: true}" [(ngModel)]="term">
+    
+  </form>
+  
+  
+  <br>
+  <br>
+<table    class="table table-sm table-hover table-striped">
+    <thead style="background-color:rgba(44,47,139,1)">
+      <tr style="color: white;" >
+        
+        <th  scope="col" >SLA</th>
+        <th scope="col">Carriers</th>
+        <th scope="col">Insured Name</th>
+        <th scope="col">Received Date</th>
+        <th scope="col">Policy</th>
+        <th scope="col">Premium</th>
+        <th scope="col">Status</th>
+        <th scope="col">Assigned To</th>
+        <th scope="col">#Mismatched Fields</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody  >
+
+      <tr class='clickable-row ' *ngFor ="let k of locked| filter:term,let i=index;" >
+      
+        
+        
+        <td id="id">{{k.ID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td>{{k.AuthID}}</td>
+       <td><button class="btn btn-link" [routerLink]="['/verify',k.ID]">View</button></td>
+       
+       
+      </tr>
+      
+     
+    </tbody>
+    
+  
+  </table>

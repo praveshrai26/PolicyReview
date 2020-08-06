@@ -1,0 +1,46 @@
+<style>
+    #foo {
+      position: absolute;
+      bottom: 95px;
+    right: 195px;
+    width: 400px;
+
+      
+    }
+   
+
+  </style>
+<div id="login" [ngStyle]="{backgroundImage:'url(./assets/Background.jpg)','height' : '700px' }">
+<pre><h2 style="bottom:215px;left: 100px; ;position: absolute; font-style: italic;font-size: 30px; color: white;font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Policy Review & 
+Comparision Management
+Powered by Intelligent Automation(IAT)
+</h2></pre>
+
+
+
+<form #f="ngForm" (ngSubmit)="onLogin(f.value)" id="foo" style="color: white;"  >
+<div class="form-group" >
+  <label for="uid">User ID</label>
+  <input [(ngModel)]="id" name="ID" type="text"  ngModel class="form-control"  id="uid" autofocus >
+</div>
+<div class="form-group">
+  <label for="pwd">Password</label>
+  <input [(ngModel)]="pwd" name="Password" type="password"   ngModel class="form-control" id="pwd" >
+</div>
+<div class="form-group" >Role
+    <select name="Role" [(ngModel)]="Role"   ngModel class="form-control" class="custom-select" >
+        <option  value="Role" >Choose your Role</option>
+        <option  >Admin</option>
+        <option >Reviewer</option>
+        <option >Approver</option>
+     </select>
+  </div>
+  <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+<button type="submit" style="width: 400px;" class="btn btn-primary">Sign In</button>
+
+</form>
+
+</div>
+
+
+

@@ -1,0 +1,29 @@
+.detailBox {
+    width:100%;
+    
+    
+}
+.titleBox {
+    background-color:#fdfdfd;
+    
+}
+
+.commentBox {
+    
+    border-top:1px dotted #bbb;
+}
+
+.actionBox .form-group * {
+    width:100%;
+}
+
+.actionBox {
+    border-top:1px dotted #bbb;
+    height:300px;
+    
+}
+.titleBox label{
+    color:#444;
+   
+    
+  }

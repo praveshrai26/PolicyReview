@@ -1,0 +1,45 @@
+
+<div class="card" style="font-family:Bw Modelica SS01;">
+    <div class=" card-body">
+        <img class="img-responsive float-left navbar-brand" style="width: 50px; height: 50px;" src="/assets/Logo.bmp">
+<p style="color:rgba(44,47,139,1);font-weight:bold ;font-family:Bw Modelica SS01;">Policy Review & Comparision Management</p>
+<ul class="nav" style="position:absolute; right: 50px; top: 0px;">
+    <li class="nav-item">
+     <button class="btn" > <a class="nav-link" style="font-weight: bold; color: rgba(44,47,139,1);" routerLink="/Home/comparison" >Home</a></button>
+    </li>
+    <li class="nav-item">
+     <button class="btn"><a class="nav-link " style="font-weight: bold;color: rgba(44,47,139,1);" routerLink="/mosaicverification" >Mosaic Data Verification</a></button>
+    </li>
+    <li class="nav-item"  *ngIf ="Role=='Approver'">
+        <button class="btn"><a class="nav-link disabled" style="font-weight: bold;" href="/Home">Dashboard</a></button>
+       </li>
+       <li>
+        <nav class="navbar navbar-expand-sm">
+            
+            <button class="navbar-toggler" type="button"  style="width: 50px;"  data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-list-4"  >
+              <ul class="navbar-nav" style="width: 50px;">
+                  <li class="nav-item dropdown"  >
+                  <a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="/assets/Logo.bmp" width="40" height="40" class="rounded-circle">
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width:20%" >
+                    
+                    <p class="dropdown-item" *ngIf="authService.isLoggedIn()">{{authService.currentUser.Name}}</p>
+                    <div class="dropdown-divider"></div>
+                    <button  class="dropdown-item" (click)="logOut()">Log Out</button>
+                  </div>
+                </li>   
+              </ul>
+            </div>
+          </nav>
+       </li>
+</ul>
+</div>
+  </div>
+
+  
+
+ 
